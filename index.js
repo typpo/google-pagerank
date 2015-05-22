@@ -108,7 +108,7 @@ var HOST = '';
     },
   };
   request(opts, function(err, resp, body) {
-    callback(err, parseInt(body.replace('Rank_1:1:', '').trim()));
+    callback(err, parseInt(body.slice(body.lastIndexOf(':') + 1).trim()));
   });
 }
 
