@@ -1,7 +1,7 @@
 {
   "name": "google-pagerank",
   "version": "0.0.1",
-  "description": "Obtains Google PageRank for a given URL.",
+  "description": "Fetches Google PageRank for a given URL.",
   "main": "index.js",
   "dependencies": {
     "request": "^2.55.0"
