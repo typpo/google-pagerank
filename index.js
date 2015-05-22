@@ -1,36 +1,28 @@
 var request = require('request');
 
-var DEBUG = false;
-
 function jenkins(strurl) {
-  var length = strurl.length;
   var url = [];
   for (var i=0; i < strurl.length; i++) {
     url.push(strurl.charCodeAt(i));
   }
 
-  var a, b;
-  var c = 0xE6359A60;
+  var a, b, c;
+  a = b = 0x9E3779B9;
+  c = 0xE6359A60;
 
   var k = 0;
+  var length = strurl.length;
   var len = length;
 
-  a = b = 0x9E3779B9;
-
   while (len >= 12) {
-    debug(len);
     a = safeAdd(a, (url[k+0] | (url[k+1] << 8) | (url[k+2] << 16) | (url[k+3] << 24)));
     b = safeAdd(b, (url[k+4] | (url[k+5] << 8) | (url[k+6] << 16) | (url[k+7] << 24)));
     c = safeAdd(c, (url[k+8] | (url[k+9] << 8) | (url[k+10] << 16) | (url[k+11] << 24)));
-
-
-    debug('#1', a, b, c);
 
     var ret = mix(a, b, c);
     a = ret[0];
     b = ret[1];
     c = ret[2];
-    debug('#2', a, b, c);
 
     k += 12;
     len -= 12;
@@ -67,14 +59,11 @@ function jenkins(strurl) {
   a = toUnsigned(a);
   b = toUnsigned(b);
   c = toUnsigned(c);
-  debug('#3', a, b, c);
 
   var ret = mix(a, b, c);
   a = ret[0];
   b = ret[1];
   c = ret[2];
-
-  debug('#4', a, b, c);
 
   return c;
 }
@@ -104,19 +93,11 @@ function toUnsigned(x) {
   return x >>> 0;
 }
 
-function debug(x) {
-  if (DEBUG) {
-    console.log(x);
-  }
-}
-
 function getPageRank(url, callback) {
   var q = 'info:' + url;
-  debug(q);
   var ch = jenkins(q);
   q = encodeURIComponent(q);
   ch = encodeURIComponent(ch);
-  debug(ch);
 
 var HOST = '';
   var opts = {
