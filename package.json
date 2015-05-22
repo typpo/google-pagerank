@@ -1,0 +1,26 @@
+{
+  "name": "google-pagerank",
+  "version": "0.0.1",
+  "description": "Obtains Google PageRank for a given URL.",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.55.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:typpo/google-pagerank.git"
+  },
+  "keywords": [
+    "google",
+    "pagerank"
+  ],
+  "author": "Ian Webster",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/typpo/google-pagerank/issues"
+  }
+}
