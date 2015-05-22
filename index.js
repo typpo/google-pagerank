@@ -145,6 +145,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = exports = {
-  getPageRank: getPageRank,
-}
+module.exports = exports = getPageRank;
