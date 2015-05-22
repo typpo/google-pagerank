@@ -19,3 +19,9 @@ the Google Toolbar endpoint to grab pagerank for any url.
 
     node index.js "http://ianww.com"
     ==> 3
+
+## Demo
+
+    Example repo at
+[typpo/pagerank-checker](http://github.com/typpo/pagerank-checker), or see it
+live at [http://ianww.com/pagerank](http://ianww.com/pagerank)
