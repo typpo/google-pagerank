@@ -22,6 +22,6 @@ the Google Toolbar endpoint to grab pagerank for any url.
 
 ## Demo
 
-    Example repo at
+Example repo at
 [typpo/pagerank-checker](http://github.com/typpo/pagerank-checker), or see it
 live at [http://ianww.com/pagerank](http://ianww.com/pagerank)
