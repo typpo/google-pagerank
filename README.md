@@ -7,6 +7,8 @@ the Google Toolbar endpoint to grab pagerank for any url.
 
 ## Node module
 
+Install with `npm install google-pagerank` or include `google-pagerank` in your module's package.json.
+
     var pagerank = require('google-pagerank');
 
     pagerank('http://ianww.com', function(err, rank) {
