@@ -1,9 +1,11 @@
 # google-pagerank
 
-This node module fetches Google PageRank.
+This [npm module](https://www.npmjs.com/package/google-pagerank) fetches Google PageRank.
 
 It accomplishes this by implementing the Jenkins hash in Javascript and using
 the Google Toolbar endpoint to grab pagerank for any url.
+
+`npm install google-pagerank`
 
 ## Node module
 
