@@ -1,4 +1,4 @@
-# google-pagerank
+# google-pagerank ** This project NO LONGER WORKS because Google removed the PageRank API.
 
 This [npm module](https://www.npmjs.com/package/google-pagerank) fetches Google PageRank.
 
